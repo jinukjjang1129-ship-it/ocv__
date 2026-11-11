@@ -1,0 +1,6 @@
+........                                                                 [100%]
+8 passed in 2.52s
+Ruff passed.
+Actual Excel runs: temporal and random, all four models fitted and evaluated.
+Legacy app logic sensitivity: OCV1-3 vs OCV1-4 executed; legacy pickle not loaded.
+Browser: actual Excel upload, four-model training, cell scoring, stException count 0.

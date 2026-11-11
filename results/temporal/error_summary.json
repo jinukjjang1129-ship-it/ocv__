@@ -1,0 +1,7 @@
+{
+  "selected_model": "random_forest",
+  "fn": 80,
+  "fn_ocv3_ge35_and_ocv4_lt35": 80,
+  "test_ng_ocv3_ge35_and_ocv4_lt35": 160,
+  "interpretation": "Late threshold crossing describes these errors; it does not prove OCV1-3 prediction is impossible."
+}
