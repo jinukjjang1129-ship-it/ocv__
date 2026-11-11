@@ -1,0 +1,56 @@
+{
+  "rows": 12000,
+  "missing": {
+    "\uc0dd\uc0b0\uc77c\uc790": 0,
+    "\uc81c\ud488\uba85": 0,
+    "OCV1": 0,
+    "OCV2": 0,
+    "OCV3": 0,
+    "OCV4": 0,
+    "OK_NG": 0
+  },
+  "class_counts": {
+    "0": 10984,
+    "1": 1016
+  },
+  "date_unique": 9,
+  "product_unique": 1,
+  "duplicate_measurements": 0,
+  "label_vs_ocv4_lt35_disagreements": 0,
+  "models": [
+    {
+      "scenario": "early_prediction",
+      "precision": 0.317016317016317,
+      "recall": 0.6699507389162561,
+      "f1": 0.43037974683544306,
+      "pr_auc_average_precision": 0.6138942681504026,
+      "confusion_matrix": [
+        [
+          1904,
+          293
+        ],
+        [
+          67,
+          136
+        ]
+      ]
+    },
+    {
+      "scenario": "post_measurement",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "pr_auc_average_precision": 1.0,
+      "confusion_matrix": [
+        [
+          2197,
+          0
+        ],
+        [
+          0,
+          203
+        ]
+      ]
+    }
+  ]
+}
