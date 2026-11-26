@@ -1,0 +1,259 @@
+{
+  "dataset_role": "provided teaching sample; manufacturing provenance unverified",
+  "split": "temporal",
+  "seed": 42,
+  "feature_columns": [
+    "OCV1",
+    "OCV2",
+    "OCV3",
+    "drop_12",
+    "drop_23",
+    "drop_change",
+    "std_123"
+  ],
+  "selection_rule": "maximum validation average precision; validation-grid F1 threshold",
+  "selected_model": "random_forest",
+  "partitions": {
+    "train": {
+      "rows": 7200,
+      "ng": 606,
+      "ok": 6594,
+      "production_dates": 5
+    },
+    "validation": {
+      "rows": 2880,
+      "ng": 250,
+      "ok": 2630,
+      "production_dates": 2
+    },
+    "test": {
+      "rows": 1920,
+      "ng": 160,
+      "ok": 1760,
+      "production_dates": 2
+    }
+  },
+  "quality": {
+    "rows": 12000,
+    "ng": 1016,
+    "prevalence": 0.08466666666666667,
+    "missing_inputs": {
+      "OCV1": 0,
+      "OCV2": 0,
+      "OCV3": 0
+    },
+    "duplicate_rows": 0,
+    "target_matches_ocv4_lt35": true
+  },
+  "models": {
+    "logistic": {
+      "validation": {
+        "threshold": 0.8,
+        "n": 2880,
+        "prevalence": 0.08680555555555555,
+        "precision": 0.4810606060606061,
+        "recall": 0.508,
+        "f1": 0.49416342412451364,
+        "average_precision": 0.522719449557598,
+        "pr_auc_trapezoid": 0.5218419057751352,
+        "tn": 2493,
+        "fp": 137,
+        "fn": 123,
+        "tp": 127,
+        "escape_per_unit": 0.042708333333333334,
+        "false_reject_per_unit": 0.04756944444444444
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.2390057361376673,
+        "recall": 0.78125,
+        "f1": 0.36603221083455345,
+        "average_precision": 0.5395340571309218,
+        "pr_auc_trapezoid": 0.5384419351760715,
+        "tn": 1362,
+        "fp": 398,
+        "fn": 35,
+        "tp": 125,
+        "escape_per_unit": 0.018229166666666668,
+        "false_reject_per_unit": 0.20729166666666668
+      },
+      "test_selected_threshold": {
+        "threshold": 0.8,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.49101796407185627,
+        "recall": 0.5125,
+        "f1": 0.5015290519877675,
+        "average_precision": 0.5395340571309218,
+        "pr_auc_trapezoid": 0.5384419351760715,
+        "tn": 1675,
+        "fp": 85,
+        "fn": 78,
+        "tp": 82,
+        "escape_per_unit": 0.040625,
+        "false_reject_per_unit": 0.044270833333333336
+      }
+    },
+    "decision_tree": {
+      "validation": {
+        "threshold": 0.8500000000000001,
+        "n": 2880,
+        "prevalence": 0.08680555555555555,
+        "precision": 0.6197916666666666,
+        "recall": 0.476,
+        "f1": 0.5384615384615384,
+        "average_precision": 0.5101797394887144,
+        "pr_auc_trapezoid": 0.5442802003709162,
+        "tn": 2557,
+        "fp": 73,
+        "fn": 131,
+        "tp": 119,
+        "escape_per_unit": 0.04548611111111111,
+        "false_reject_per_unit": 0.025347222222222222
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.21833333333333332,
+        "recall": 0.81875,
+        "f1": 0.3447368421052632,
+        "average_precision": 0.5215807023342203,
+        "pr_auc_trapezoid": 0.5587696672750647,
+        "tn": 1291,
+        "fp": 469,
+        "fn": 29,
+        "tp": 131,
+        "escape_per_unit": 0.015104166666666667,
+        "false_reject_per_unit": 0.24427083333333333
+      },
+      "test_selected_threshold": {
+        "threshold": 0.8500000000000001,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.6752136752136753,
+        "recall": 0.49375,
+        "f1": 0.5703971119133574,
+        "average_precision": 0.5215807023342203,
+        "pr_auc_trapezoid": 0.5587696672750647,
+        "tn": 1722,
+        "fp": 38,
+        "fn": 81,
+        "tp": 79,
+        "escape_per_unit": 0.0421875,
+        "false_reject_per_unit": 0.019791666666666666
+      }
+    },
+    "random_forest": {
+      "validation": {
+        "threshold": 0.8,
+        "n": 2880,
+        "prevalence": 0.08680555555555555,
+        "precision": 0.6684782608695652,
+        "recall": 0.492,
+        "f1": 0.5668202764976958,
+        "average_precision": 0.6065475827629191,
+        "pr_auc_trapezoid": 0.6059362682745576,
+        "tn": 2569,
+        "fp": 61,
+        "fn": 127,
+        "tp": 123,
+        "escape_per_unit": 0.044097222222222225,
+        "false_reject_per_unit": 0.021180555555555557
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.30526315789473685,
+        "recall": 0.725,
+        "f1": 0.42962962962962964,
+        "average_precision": 0.6230920819820972,
+        "pr_auc_trapezoid": 0.6222473418914556,
+        "tn": 1496,
+        "fp": 264,
+        "fn": 44,
+        "tp": 116,
+        "escape_per_unit": 0.022916666666666665,
+        "false_reject_per_unit": 0.1375
+      },
+      "test_selected_threshold": {
+        "threshold": 0.8,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.6956521739130435,
+        "recall": 0.5,
+        "f1": 0.5818181818181818,
+        "average_precision": 0.6230920819820972,
+        "pr_auc_trapezoid": 0.6222473418914556,
+        "tn": 1725,
+        "fp": 35,
+        "fn": 80,
+        "tp": 80,
+        "escape_per_unit": 0.041666666666666664,
+        "false_reject_per_unit": 0.018229166666666668
+      }
+    },
+    "xgboost": {
+      "validation": {
+        "threshold": 0.7500000000000001,
+        "n": 2880,
+        "prevalence": 0.08680555555555555,
+        "precision": 0.5769230769230769,
+        "recall": 0.54,
+        "f1": 0.5578512396694215,
+        "average_precision": 0.603683846924745,
+        "pr_auc_trapezoid": 0.6031285502647673,
+        "tn": 2531,
+        "fp": 99,
+        "fn": 115,
+        "tp": 135,
+        "escape_per_unit": 0.03993055555555555,
+        "false_reject_per_unit": 0.034375
+      },
+      "test_default": {
+        "threshold": 0.5,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.2796208530805687,
+        "recall": 0.7375,
+        "f1": 0.4054982817869416,
+        "average_precision": 0.641254006107863,
+        "pr_auc_trapezoid": 0.6406246217723589,
+        "tn": 1456,
+        "fp": 304,
+        "fn": 42,
+        "tp": 118,
+        "escape_per_unit": 0.021875,
+        "false_reject_per_unit": 0.15833333333333333
+      },
+      "test_selected_threshold": {
+        "threshold": 0.7500000000000001,
+        "n": 1920,
+        "prevalence": 0.08333333333333333,
+        "precision": 0.6241610738255033,
+        "recall": 0.58125,
+        "f1": 0.6019417475728155,
+        "average_precision": 0.641254006107863,
+        "pr_auc_trapezoid": 0.6406246217723589,
+        "tn": 1704,
+        "fp": 56,
+        "fn": 67,
+        "tp": 93,
+        "escape_per_unit": 0.034895833333333334,
+        "false_reject_per_unit": 0.029166666666666667
+      }
+    }
+  },
+  "limitations": [
+    "Teaching sample is not verified production/customer data",
+    "Measurement intervals and physical units are unconfirmed",
+    "No cell ID; repeated-cell leakage cannot be fully excluded",
+    "Only a few production dates and one product in supplied sample",
+    "Probability scores are not calibrated",
+    "Test comparisons are retrospective; new future data is required"
+  ],
+  "input_sha256": "1648d14b7ac8ba88c0fc4bd2e16ea803080e6e87bd8e4b286e48db0496347cfb"
+}
